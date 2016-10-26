@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             sb.setSpan(new AnimatedImageSpan(new AnimatedGifDrawable(getAssets().open("agif.gif"), new AnimatedGifDrawable.UpdateListener() {
                 @Override
                 public void update() {
-                    gifTextView.postInvalidate();
+                    gifTextView.invalidate();
                 }
             })), sb.length() - dummyText.length(), sb.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         } catch (IOException e) {
